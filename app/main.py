@@ -15,6 +15,7 @@ class UserOut(BaseModel):
     email: str | None = None
 
 
+
 # 最小健康檢查
 @app.get("/health")
 def health() -> dict[str, str]:
