@@ -70,7 +70,7 @@ cd minimal_fastapi
 uv sync
 
 # 或使用 pip
-pip install -r requirements.lock.txt
+pip install -r requirements.txt
 ```
 
 3. **啟動開發伺服器**
