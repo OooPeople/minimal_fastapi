@@ -2,7 +2,7 @@ import pytest
 from fastapi.testclient import TestClient
 from app.main import app, _FAKE_DB
 
-client = TestClient(app)
+client = TestClient(app) # 在記憶體內跑 app.main.py 的程式
 
 @pytest.fixture(autouse=True)
 def _reset_db():

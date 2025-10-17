@@ -25,8 +25,8 @@ def health() -> dict[str, str]:
 _FAKE_DB: list[UserOut] = []
 
 @app.post("/users", response_model=UserOut, status_code=201)
-def create_user(user: UserIn) -> UserOut:
-    new = UserOut(id=len(_FAKE_DB) + 1, **user.model_dump())
+def create_user(user: UserIn) -> UserOut: # FastAPI 把 JSON 解析成 UserIn，並由 Pydantic 驗證與轉型
+    new = UserOut(id=len(_FAKE_DB) + 1, **user.model_dump()) # model_dump() → 乾淨 dict，再用**解包成關鍵字參數
     _FAKE_DB.append(new)
     return new
 
