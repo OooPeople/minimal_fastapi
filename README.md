@@ -41,12 +41,12 @@ POST /users
 minimal_fastapi/
 ├── app/
 │   ├── __init__.py
-│   └── main.py          # 主要應用程式邏輯
+│   └── main.py        # 主要應用程式邏輯
 ├── tests/
 │   ├── __init__.py
-│   └── test_api.py      # API 測試
-├── pyproject.toml       # 專案配置與依賴
-├── requirements.lock.txt # 鎖定的依賴版本
+│   └── test_api.py    # API 測試
+├── pyproject.toml     # 專案配置與依賴
+├── requirements.txt   # 鎖定的依賴版本
 └── README.md
 ```
 
